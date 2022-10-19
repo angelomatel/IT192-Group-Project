@@ -7,11 +7,11 @@ import java.util.List;
 public interface IAdoptionService {
     List<Adoption> getAdoptions();
 
-    Adoption getAdoption(int id);
+    Adoption getAdoption(long id);
 
     Adoption addAdoption(Adoption adoption);
 
-    Adoption updateAdoption(int id, Adoption adoption);
+    Adoption updateAdoption(long id, Adoption adoption);
 
-    void deleteAdoption(int id);
+    void deleteAdoption(long id);
 }

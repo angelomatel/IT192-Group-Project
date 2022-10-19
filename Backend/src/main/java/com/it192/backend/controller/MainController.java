@@ -47,17 +47,17 @@ public class MainController {
     //ADOPTIONS
     @RequestMapping("/api/adoptions")
     public List<Adoption> findAdoptions() { return adoptionService.getAdoptions(); }
-    @RequestMapping(value="/api/adoptions/{id}")
-    public Adoption showAdoption(@PathVariable int id) { return adoptionService.getAdoption(id); }
+    @RequestMapping(value="/api/adoption/{id}")
+    public Adoption showAdoption(@PathVariable("id") long id) { return adoptionService.getAdoption(id); }
 
     @RequestMapping(value="/api/add-adoption", method=RequestMethod.POST)
     public Adoption addAdoption(@RequestBody Adoption adoption) { return adoptionService.addAdoption(adoption); }
 
     @RequestMapping(value="/api/update-adoption/{id}", method=RequestMethod.PUT)
-    public Adoption updateAdoption(@PathVariable int id, @RequestBody Adoption adoption) { return adoptionService.updateAdoption(id, adoption); }
+    public Adoption updateAdoption(@PathVariable("id") long id, @RequestBody Adoption adoption) { return adoptionService.updateAdoption(id, adoption); }
 
     @RequestMapping(value="/api/delete-adoption/{id}", method=RequestMethod.DELETE)
-    public void deleteAdoption(@PathVariable int id, @RequestBody Adoption adoption) {  }
+    public void deleteAdoption(@PathVariable("id") long id) { adoptionService.deleteAdoption(id); }
 
     //USERS
     @RequestMapping("/api/users")
@@ -73,5 +73,5 @@ public class MainController {
     public User updateUser(@PathVariable int id, @RequestBody User user) { return userService.updateUser(id, user); }
 
     @RequestMapping(value="/api/delete-User/{id}", method=RequestMethod.DELETE)
-    public void deleteUser(@PathVariable int id, @RequestBody User user) {  }
+    public void deleteUser(@PathVariable int id, @RequestBody User user) {userService.deleteUser(id);  }
 }

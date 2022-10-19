@@ -19,11 +19,11 @@ public class AdoptionService implements IAdoptionService{
     public List<Adoption> getAdoptions() {
         List<Adoption> allAdoptions = new ArrayList<>();
         adoptionRepository.findAll().forEach(allAdoptions::add);
-        return null;
+        return allAdoptions;
     }
 
     @Override
-    public Adoption getAdoption(int id) {
+    public Adoption getAdoption(long id) {
         Optional<Adoption> adoption = adoptionRepository.findById(id);
         if(adoption.isPresent()) return adoption.get();
 
@@ -36,12 +36,12 @@ public class AdoptionService implements IAdoptionService{
     }
 
     @Override
-    public Adoption updateAdoption(int id, Adoption adoption) {
+    public Adoption updateAdoption(long id, Adoption adoption) {
         return adoptionRepository.save(adoption);
     }
 
     @Override
-    public void deleteAdoption(int id) {
+    public void deleteAdoption(long id) {
         adoptionRepository.deleteById(id);
     }
 }
