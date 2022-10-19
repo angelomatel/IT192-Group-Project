@@ -24,7 +24,7 @@ public class DogService implements IDogService {
     }
 
     @Override
-    public Dog getDog(int id) {
+    public Dog getDog(long id) {
         Optional<Dog> dog = dogRepository.findById(id);
 
         if(dog.isPresent()) return dog.get();
@@ -38,12 +38,12 @@ public class DogService implements IDogService {
     }
 
     @Override
-    public Dog updateDog(int id, Dog dog) {
+    public Dog updateDog(long id, Dog dog) {
         return dogRepository.save(dog);
     }
 
     @Override
-    public void deleteDog(int id) {
+    public void deleteDog(long id) {
         dogRepository.deleteById(id);
     }
 }

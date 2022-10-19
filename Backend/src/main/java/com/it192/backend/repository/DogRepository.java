@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 import com.it192.backend.model.Dog;
 
 @Repository
-public interface DogRepository extends CrudRepository <Dog, Integer> {
+public interface DogRepository extends CrudRepository <Dog, Long> {
 }

@@ -24,7 +24,7 @@ public class UserService implements IUserService {
     }
 
     @Override
-    public User getUser(int id) {
+    public User getUser(long id) {
         Optional<User> user = userRepository.findById(id);
 
         if(user.isPresent()) return user.get();
@@ -38,12 +38,12 @@ public class UserService implements IUserService {
     }
 
     @Override
-    public User updateUser(int id, User user) {
+    public User updateUser(long id, User user) {
         return userRepository.save(user);
     }
 
     @Override
-    public void deleteUser(int id) {
+    public void deleteUser(long id) {
         userRepository.deleteById(id);
     }
 }

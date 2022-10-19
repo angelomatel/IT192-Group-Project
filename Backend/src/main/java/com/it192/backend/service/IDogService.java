@@ -7,11 +7,11 @@ import java.util.List;
 public interface IDogService {
     List<Dog> getDogs();
 
-    Dog getDog(int id);
+    Dog getDog(long id);
 
     Dog addDog(Dog dog);
 
-    Dog updateDog(int id, Dog dog);
+    Dog updateDog(long id, Dog dog);
 
-    void deleteDog(int id);
+    void deleteDog(long id);
 }

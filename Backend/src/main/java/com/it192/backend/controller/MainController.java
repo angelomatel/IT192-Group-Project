@@ -33,16 +33,16 @@ public class MainController {
     public List<Dog> findDogs() { return dogService.getDogs(); }
 
     @RequestMapping(value="/api/show-Dog/{id}")
-    public Dog showDog(@PathVariable int id) { return dogService.getDog(id); }
+    public Dog showDog(@PathVariable("id") long id) { return dogService.getDog(id); }
 
     @RequestMapping(value="/api/add-Dog", method=RequestMethod.POST)
-    public Dog addDog(@RequestBody Dog Dog) { return dogService.addDog(Dog); }
+    public Dog addDog(@RequestBody Dog dog) { return dogService.addDog(dog); }
 
     @RequestMapping(value="/api/update-Dog/{id}", method=RequestMethod.PUT)
-    public Dog updateDog(@PathVariable int id, @RequestBody Dog dog) { return dogService.updateDog(id, dog); }
+    public Dog updateDog(@PathVariable("id") long id, @RequestBody Dog dog) { return dogService.updateDog(id, dog); }
 
     @RequestMapping(value="/api/delete-Dog/{id}", method=RequestMethod.DELETE)
-    public void deleteDog(@PathVariable int id, @RequestBody Dog Dog) {  }
+    public void deleteDog(@PathVariable("id") long id) {  }
 
     //ADOPTIONS
     @RequestMapping("/api/adoptions")
@@ -64,14 +64,14 @@ public class MainController {
     public List<User> findUsers() { return userService.getUsers(); }
 
     @RequestMapping(value="/api/show-User/{id}")
-    public User showUser(@PathVariable int id) { return userService.getUser(id); }
+    public User showUser(@PathVariable("id") long id) { return userService.getUser(id); }
 
     @RequestMapping(value="/api/add-User", method=RequestMethod.POST)
     public User addUser(@RequestBody User user) { return userService.addUser(user); }
 
     @RequestMapping(value="/api/update-User/{id}", method=RequestMethod.PUT)
-    public User updateUser(@PathVariable int id, @RequestBody User user) { return userService.updateUser(id, user); }
+    public User updateUser(@PathVariable("id") long id, @RequestBody User user) { return userService.updateUser(id, user); }
 
     @RequestMapping(value="/api/delete-User/{id}", method=RequestMethod.DELETE)
-    public void deleteUser(@PathVariable int id, @RequestBody User user) {userService.deleteUser(id);  }
+    public void deleteUser(@PathVariable("id") long id) {userService.deleteUser(id);  }
 }
