@@ -3,7 +3,6 @@ package com.it192.backend.controller;
 import com.it192.backend.model.Country;
 import com.it192.backend.service.ICountryService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
