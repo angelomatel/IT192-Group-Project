@@ -8,7 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.it192.backend.model.Dog;
 import com.it192.backend.repository.DogRepository;
+import org.springframework.stereotype.Service;
 
+@Service
 public class DogService implements IDogService {
     @Autowired
     private DogRepository dogRepository;

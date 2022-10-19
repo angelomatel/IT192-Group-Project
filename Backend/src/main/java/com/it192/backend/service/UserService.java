@@ -8,7 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.it192.backend.model.User;
 import com.it192.backend.repository.UserRepository;
+import org.springframework.stereotype.Service;
 
+@Service
 public class UserService implements IUserService {
     @Autowired
     private UserRepository userRepository;

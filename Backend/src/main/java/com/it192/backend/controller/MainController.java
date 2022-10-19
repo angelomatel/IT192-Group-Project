@@ -1,12 +1,17 @@
 package com.it192.backend.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+
+import com.it192.backend.model.Adoption;
 import com.it192.backend.model.Dog;
 import com.it192.backend.model.User;
+
+import com.it192.backend.service.IAdoptionService;
 import com.it192.backend.service.IDogService;
 import com.it192.backend.service.IUserService;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -16,8 +21,14 @@ import java.util.List;
 public class MainController {
     @Autowired
     private IDogService dogService;
+
+    @Autowired
     private IUserService userService;
 
+    @Autowired
+    private IAdoptionService adoptionService;
+
+    //DOGS
     @RequestMapping("/api/dogs")
     public List<Dog> findDogs() { return dogService.getDogs(); }
 
@@ -33,7 +44,22 @@ public class MainController {
     @RequestMapping(value="/api/delete-Dog/{id}", method=RequestMethod.DELETE)
     public void deleteDog(@PathVariable int id, @RequestBody Dog Dog) {  }
 
-    
+    //ADOPTIONS
+    @RequestMapping("/api/adoptions")
+    public List<Adoption> findAdoptions() { return adoptionService.getAdoptions(); }
+    @RequestMapping(value="/api/adoptions/{id}")
+    public Adoption showAdoption(@PathVariable int id) { return adoptionService.getAdoption(id); }
+
+    @RequestMapping(value="/api/add-adoption", method=RequestMethod.POST)
+    public Adoption addAdoption(@RequestBody Adoption adoption) { return adoptionService.addAdoption(adoption); }
+
+    @RequestMapping(value="/api/update-adoption/{id}", method=RequestMethod.PUT)
+    public Adoption updateAdoption(@PathVariable int id, @RequestBody Adoption adoption) { return adoptionService.updateAdoption(id, adoption); }
+
+    @RequestMapping(value="/api/delete-adoption/{id}", method=RequestMethod.DELETE)
+    public void deleteAdoption(@PathVariable int id, @RequestBody Adoption adoption) {  }
+
+    //USERS
     @RequestMapping("/api/users")
     public List<User> findUsers() { return userService.getUsers(); }
 
