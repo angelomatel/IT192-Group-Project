@@ -12,4 +12,6 @@ public interface IDogService {
     Dog addDog(Dog dog);
 
     Dog updateDog(int id, Dog dog);
+
+    void deleteDog(int id);
 }

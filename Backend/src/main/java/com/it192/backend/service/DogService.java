@@ -39,4 +39,9 @@ public class DogService implements IDogService {
     public Dog updateDog(int id, Dog dog) {
         return dogRepository.save(dog);
     }
+
+    @Override
+    public void deleteDog(int id) {
+        dogRepository.deleteById(id);
+    }
 }
