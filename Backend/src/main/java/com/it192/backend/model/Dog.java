@@ -14,6 +14,7 @@ public class Dog {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long dog_id;
 
+    private String name;
     private String gender;
     private String age;
     private String size;
@@ -25,9 +26,10 @@ public class Dog {
 
     public Dog(){}
 
-    public Dog(long dog_id, String gender, String age, String size, String color,
+    public Dog(long dog_id, String name, String gender, String age, String size, String color,
     Blob images, String adjectives, String story, boolean hasOwner){
         this.dog_id = dog_id;
+        this.name = name;
         this.gender = gender;
         this.age = age;
         this.size = size;
@@ -40,6 +42,9 @@ public class Dog {
 
     public void setId(long dog_id){
         this.dog_id = dog_id;
+    }
+    public void setName(String name){
+        this.name = name;
     }
     public void setGender(String gender){
         this.gender = gender;
@@ -68,6 +73,9 @@ public class Dog {
 
     public long getId(){
         return dog_id;
+    }
+    public String getName(){
+        return name;
     }
     public String getGender(){
         return gender;
@@ -98,6 +106,7 @@ public class Dog {
     public int hashCode() {
         int hash = 7;
         hash = 79 * hash + Objects.hashCode(this.dog_id);
+        hash = 79 * hash + Objects.hashCode(this.name);
         hash = 79 * hash + Objects.hashCode(this.gender);
         hash = 79 * hash + Objects.hashCode(this.age);
         hash = 79 * hash + Objects.hashCode(this.size);
@@ -117,6 +126,7 @@ public class Dog {
         
         final Dog other = (Dog) obj;
         if (!Objects.equals(this.dog_id, other.dog_id)) return false;
+        if (!Objects.equals(this.name, other.name)) return false;
         if (!Objects.equals(this.gender, other.gender)) return false;
         if (!Objects.equals(this.age, other.age)) return false;
         if (!Objects.equals(this.size, other.size)) return false;
@@ -133,6 +143,7 @@ public class Dog {
     public String toString() {
         final StringBuilder sb = new StringBuilder("Dog{");
         sb.append("dog_id=").append(dog_id);
+        sb.append(", name=").append(name);
         sb.append(", gender=").append(gender);
         sb.append(", age=").append(age);
         sb.append(", size=").append(size);
