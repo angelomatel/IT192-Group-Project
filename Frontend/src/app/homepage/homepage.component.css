@@ -4,8 +4,29 @@ a{
 }
 
 body{
+    background-image:url(https://us.123rf.com/450wm/cnuisin/cnuisin1901/cnuisin190100045/117828548-dog-paw-seamless-pattern-vector-heart-isolated-scarf-valentine-wallpaper-repeat-background.jpg?ver=6);
     background-color:gainsboro;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+.adoptAtHome{
+    position: absolute;
+    text-align: justify;
+    right:0px;
+    margin-top: 150px;
+    width: 700px;
+    height: 300px;
+}
+
+.adoptAtHomePanel{
+    background-color: #EDEAE5;
+    padding: 50px;
+}
+
+.adoptAtHomePanel h1{
+    font-size: 200%;
+}
+
 .bottomMessage{
     background-color: #EDEAE5;
     margin-top: 20px;
@@ -14,8 +35,14 @@ body{
     box-shadow: 3px 7px 10px gray;
 }
 .bottomMessage h1{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
     color: #92B4EC;
+}
+
+.bottomMessage p{
+    text-align: justify;
+    font-size: 120%;
+    padding-right: 800px;
 }
 .homeImage{
     background-image: url(https://media.4-paws.org/3/9/3/1/3931c3a89c44aa0c5a73a7e7fa1c07f1a0bc76a6/VIER%20PFOTEN_2016-09-18_081-2000x666-1920x639.jpg);
