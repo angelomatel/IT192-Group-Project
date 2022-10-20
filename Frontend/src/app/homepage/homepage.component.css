@@ -1,0 +1,40 @@
+a{
+    text-decoration: none;
+    color: #EDEAE5;
+}
+
+body{
+    background-color:gainsboro;
+}
+.bottomMessage{
+    background-color: #EDEAE5;
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    box-shadow: 3px 7px 10px gray;
+}
+.bottomMessage h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #92B4EC;
+}
+.homeImage{
+    background-image: url(https://media.4-paws.org/3/9/3/1/3931c3a89c44aa0c5a73a7e7fa1c07f1a0bc76a6/VIER%20PFOTEN_2016-09-18_081-2000x666-1920x639.jpg);
+    background-size: cover;
+    background-position: center;
+    background-color:rgba(228, 228, 228, 0.932);
+    height:600px;
+    box-shadow: 0px 7px 10px gray;
+}
+
+.homeImageMessage{
+    position:right;
+}
+.navbar{
+    justify-content:space-between;
+    background-color:#92B4EC;
+    color:#EDEAE5;
+}
+
+span {  
+    padding-right: 1rem;
+}

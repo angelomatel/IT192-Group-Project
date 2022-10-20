@@ -7,19 +7,34 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ShowCountriesComponent } from './show-countries/show-countries.component';
 import { ShowCountryComponent } from './show-country/show-country.component';
+import { HomepageComponent } from './homepage/homepage.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSliderModule } from '@angular/material/slider';
+import { AdoptionpageComponent } from './adoptionpage/adoptionpage.component';
+import { AdoptionformComponent } from './adoptionform/adoptionform.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     ShowCountriesComponent,
-    ShowCountryComponent
+    ShowCountryComponent,
+    HomepageComponent,
+    AdoptionpageComponent,
+    AdoptionformComponent,
+    AboutusComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    MatToolbarModule,
+    MatSliderModule
   ],
+  exports: [MatToolbarModule],
   providers: [],
   bootstrap: [AppComponent]
 })
