@@ -1,16 +1,17 @@
-a{
-    text-decoration: none;
-    color: black;
-}
-
-body{
-    background-image: url(http://wallpaperset.com/w/full/a/8/4/38610.jpg);
-    background-repeat: no-repeat;
-    background-size: auto;
-}
-
 .navbar{
-    justify-content:space-between
+    justify-content:space-between;
+    background-color:#92B4EC;
+    color:#EDEAE5;
+}
+
+.spananchor a{
+    text-decoration: none;
+    color: #EDEAE5;
+}
+
+footer{
+    background-color: gray;
+    height:200px;
 }
 
 span {  
