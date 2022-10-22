@@ -13,6 +13,8 @@ import { MatSliderModule } from '@angular/material/slider';
 import { AdoptionpageComponent } from './adoptionpage/adoptionpage.component';
 import { AdoptionformComponent } from './adoptionform/adoptionform.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
+import { LoginformComponent } from './loginform/loginform.component';
+import { AdoptionrequestComponent } from './adoptionrequest/adoptionrequest.component';
 
 
 
@@ -25,6 +27,8 @@ import { AboutusComponent } from './aboutus/aboutus.component';
     AdoptionpageComponent,
     AdoptionformComponent,
     AboutusComponent,
+    LoginformComponent,
+    AdoptionrequestComponent,
   ],
   imports: [
     BrowserModule,
