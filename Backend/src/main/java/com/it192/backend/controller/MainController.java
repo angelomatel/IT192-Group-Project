@@ -13,8 +13,12 @@ import com.it192.backend.service.IUserService;
 
 import java.util.List;
 
+<<<<<<< HEAD
 //For CORS policy bypass
 @CrossOrigin(maxAge = 3600)
+=======
+@CrossOrigin(origins = "http://localhost:4200")
+>>>>>>> ba44fdc9f67e4d5d6e7d6105df6526df88791c06
 
 @RestController
 public class MainController {
