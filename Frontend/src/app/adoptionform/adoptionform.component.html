@@ -9,4 +9,171 @@
       </div>
   </mat-toolbar>
   
-  </body>
+  <div class = "adoptForm"> 
+    <form>
+    <!-- idk wat to do wit dis pa -->
+        <!-- name, age, sex, status, address, occupation -->
+          <tr>
+            <th class = "blackHeader" colspan = "4">NAME</th>
+          </tr>
+          <tr class = "userInput">
+            <th><input type = "text" id = "FName" name = "FName"></th>
+            <th><input type = "text" id = "MName" name = "MName"></th>
+            <th><input type = "text" id = "LName" name = "LName"></th>
+            <th><input type = "text" id = "Suffx" name = "Suffx"></th>
+          </tr>
+          <tr class = "label">
+            <th>First Name</th>
+            <th>Middle Name</th>
+            <th>Last Name</th>
+            <th>Suffix</th>
+          </tr>
+
+          <br>
+              
+          <tr>
+            <th class = "blackHeader">AGE</th>
+            <th class = "blackHeader">SEX</th>
+            <th class = "blackHeader">STATUS</th>
+            <th class = "blackHeader">OCCUPATION</th>
+          </tr>
+          <tr>
+            <th><input type = "text" id = "Age" name = "Age"></th>
+            <th><input type = "text" id = "Sex" name = "Sex"></th>
+            <th><input type = "text" id = "Status" name = "Status"></th>
+            <th><input type = "text" id = "Occupation" name = "Occupation"></th>
+          </tr>
+          <tr>
+            <th colspan = "4" class = "blackHeader">ADDRESS</th>
+          </tr>
+          <textarea id = "Address" name = "Address" rows = "2" cols = "71"></textarea>      
+
+          
+            
+        <!-- cellphone number, telephone number*, email, facebook, twitter, instagram -->
+          <tr>
+            <th class = "blackHeader">CELLPHONE</th>
+            <th class = "blackHeader">TELEPHONE</th>
+            <th class = "blackHeader">EMAIL ADDRESS</th>
+            <th class = "blackHeader">FACEBOOK</th>
+          </tr>
+          <tr>
+            <th><input type = "text" id = "cellphone" name = "cellphone"></th>
+            <th><input type = "text" id = "telephone" name = "telephone"></th>
+            <th><input type = "email" id = "email" name = "email"></th>
+            <th><input type = "text" id = "fb" name = "fb"></th>
+          </tr>
+
+        <!-- what are you looking to adopt, questionnaire -->
+        <tr>
+          <th class = "blackHeader" colspan = "4">ANSWER THE FOLLOWING HONESTLY</th>
+        </tr>
+        <tr>
+          <th class = "label" colspan = "2" align = "left">What are you looking to adopt?</th>
+          
+          <th>
+            <input type = "radio" id = "dog" name = "animal" value = "dog">
+            <label for = "dog">Dog</label>
+          </th>
+          <th>
+          <input type = "radio" id = "cat" name = "animal" value = "cat">
+            <label for = "cat">Cat</label>
+          </th>
+        </tr>
+        <tr>
+          <th class = "label" colspan = "3" align = "left">Please specify if your choice is not in the options above.</th>
+          <th><input type = "text" id = "others" name = "others"></th>
+          <br><br>
+        </tr>
+        <tr>
+          <th>
+            <input type = "radio" id ="yes" name = "knowName" value = "yes">
+            <label for = "yes">Yes</label>
+            <input type = "radio" id ="no" name = "knowName" value = "no">
+            <label for = "no">No</label>
+          </th>
+          <th class = "label" colspan = "3" align = "left">Do you know the name of the animal you want to adopt?</th>
+        </tr>
+        <tr>
+          <th></th>
+          <th class = "label" colspan = "2" align = "left">If yes, please specify. (You may list up to 3.)</th>
+          <th><input type = "text" id = "petName" name = "petName"></th>
+        </tr>
+        <tr>
+          <th>
+            <input type = "radio" id ="yes" name = "idealPet" value = "yes">
+            <label for = "yes">Yes</label>
+            <input type = "radio" id ="no" name = "idealPet" value = "no">
+            <label for = "no">No</label>
+          </th>
+          <th class = "label" colspan = "3" align = "left">Do you have an ideal pet?</th>
+        </tr>
+        <tr>
+          <th></th>
+          <th class = "label" colspan = "2" align = "left">If yes, please describe them.</th>
+          <th><input type = "text" id = "idealPetDesc" name = "idealPetDesc"></th>
+        </tr>
+        <tr>
+          <th>
+            <input type = "radio" id ="yes" name = "otherPet" value = "yes">
+            <label for = "yes">Yes</label>
+            <input type = "radio" id ="no" name = "otherPet" value = "no">
+            <label for = "no">No</label>
+          </th>
+          <th class = "label" colspan = "3" align = "left">Do you have other pets?</th>
+        </tr>
+        <tr>
+          <th></th>
+          <th class = "label" colspan = "2" align = "left">If yes, please describe them.</th>
+          <th><input type = "text" id = "otherPetDesc" name = "otherPetDesc"></th>
+        </tr>
+        <tr>
+          <th>
+            <input type = "radio" id ="yes" name = "pastPets" value = "yes">
+            <label for = "yes">Yes</label>
+            <input type = "radio" id ="no" name = "pastPets" value = "no">
+            <label for = "no">No</label>
+          </th>
+          <th class = "label" colspan = "3" align = "left">Have you had pets in the past?</th>
+        </tr>
+        <tr>
+          <th>
+            <input type = "radio" id ="yes" name = "children" value = "yes">
+            <label for = "yes">Yes</label>
+            <input type = "radio" id ="no" name = "children" value = "no">
+            <label for = "no">No</label>
+          </th>
+          <th class = "label" colspan = "3" align = "left">Do you live with children?</th>
+        </tr>
+        <tr>
+          <th>
+            <input type = "radio" id ="yes" name = "allergic" value = "yes">
+            <label for = "yes">Yes</label>
+            <input type = "radio" id ="no" name = "allergic" value = "no">
+            <label for = "no">No</label>
+          </th>
+          <th class = "label" colspan = "3" align = "left">Are any members of your household allergic to animals?</th>
+        </tr>
+        <tr>
+          <th></th>
+          <th class = "label" colspan = "2" align = "left">If yes, how will it be managed?</th>
+          <th><input type = "text" id = "allergyManagement" name = "allergyManagement"></th>
+        </tr>
+    
+    <br>
+    <input type = "checkbox" id = "terms" name = "terms" value = "terms">
+    <label for = "terms">I understand that a physical evaluation of my household will be conducted.</label>
+    <br>
+    <input type = "submit" value = "Submit">
+    <input type = "reset">
+
+
+    </form>
+  </div>
+</body>
+
+  <!-- W H I T E B O A R D -->
+  <!--
+    https://docs.google.com/document/d/1Mwgx_IzM4PdS9NgdaPU4W8dqEeCryPB7KHG69Fegb00/edit
+    
+  -->
