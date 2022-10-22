@@ -1,38 +1,26 @@
-<mat-toolbar
-  class="flex justify-between sticky z-100 top-0"
-  style="background-color: #108979"
+<div
+  class="flex justify-between items-center px-5 sticky z-40 top-0 border border-b-2 bg-white h-20"
 >
-  <a class="text-2xl font-semibold text-white cursor-pointer" href="/homepage"
-    ><mat-icon>pets</mat-icon> Pet Adoption</a
-  >
-  <div class="spananchor">
-    <span
-      ><a
-        routerLink="/homepage"
-        class="text-white text-sm mr-5 hover:text-gray-200 hover:underline underline-offset-2"
-        >Home</a
-      ></span
+  <a
+    class="text-2xl font-semibold text-cyan-700 cursor-pointer"
+    href="/homepage"
+    ><mat-icon class="mr-3">pets</mat-icon>Save-a-friend</a
+  > 
+  <div class="flex justify-center items-center gap-4">
+    <a
+      routerLink="/homepage"
+      class="text-cyan-700 text-sm mr-5 font-semibold hover:text-cyan-600"
+      >Home</a
     >
-    <span
-      ><a
-        routerLink="/adoptionpage"
-        class="text-white text-sm mr-5 hover:text-gray-200 hover:underline underline-offset-2"
-        >Adopt Here</a
-      ></span
+    <a
+      routerLink="/aboutus"
+      class="text-cyan-700 text-sm mr-5 font-semibold hover:text-cyan-600 border-r pr-10"
+      >About Us</a
     >
-    <span
-      ><a
-        routerLink="/adoptionform"
-        class="text-white text-sm mr-5 hover:text-gray-200 hover:underline underline-offset-2"
-        >Adoption Form</a
-      ></span
-    >
-    <span
-      ><a
-        routerLink="/aboutus"
-        class="text-white text-sm mr-5 hover:text-gray-200 hover:underline underline-offset-2"
-        >About Us</a
-      ></span
+    <a
+      routerLink="/adoptionpage"
+      class="text-sm mr-5 font-semibold bg-cyan-900 text-white border-white underline-offset-2 hover:bg-white hover:text-cyan-900 py-3 px-6 border hover:border-gray-700 rounded-full"
+      >Save a friend!</a
     >
   </div>
-</mat-toolbar>
+</div>
