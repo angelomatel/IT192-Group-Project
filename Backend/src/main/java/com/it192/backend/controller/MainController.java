@@ -15,7 +15,7 @@ import com.it192.backend.service.IUserService;
 
 import java.util.List;
 
-//@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "http://localhost:4200")
 
 @RestController
 public class MainController {
