@@ -1,0 +1,44 @@
+<body>
+  <navbar></navbar>
+<section class="dogs">
+  <h1> Adopt a dog</h1>
+  <div class="row">
+    <!--  <section class="row" id="row">
+  
+      <div class="dogs-col">
+
+    <div class *ngFor let gd of getDogs>
+      <a href="https://en.wikipedia.org/wiki/Boracay" target="_blank"><img src="//www.html.am/images/html-codes/links/boracay-white-beach-sunset-300x225.jpg" width="300" height="225" alt="Photo of White Beach in Boracay, Philippines" style="border:1px solid black;" /></a>
+      <h3>{{gd.name}}</h3>
+      <p>{{gd.adjectives}}</p>
+      <p>{{gd.gender}} | {{gd.age}} years old</p>
+      <p>{{gd.size}} | {{gd.color}}</p>
+      <p>{{gd.story}}</p>
+    </div>
+-->
+
+      <div *ngFor="let dog of dogs">
+        <a href="https://en.wikipedia.org/wiki/Boracay" target="_blank"><img src="//www.html.am/images/html-codes/links/boracay-white-beach-sunset-300x225.jpg" width="300" height="225" alt="Photo of White Beach in Boracay, Philippines" style="border:1px solid black;" /></a>
+        <h3>{{dog.name}}</h3>
+        <p>{{dog.adjectives}}</p>
+        <p>{{dog.gender}} | {{dog.age}} years old</p>
+        <p>{{dog.size}} | {{dog.color}}</p>
+        <p>{{dog.story}}</p>
+      </div>
+
+      <div class="dogs-col">
+
+        <!--THIS WAS SUPPOSED TO BE <img src="">-->
+        <a href="https://en.wikipedia.org/wiki/Boracay" target="_blank"><img src="//www.html.am/images/html-codes/links/boracay-white-beach-sunset-300x225.jpg" width="300" height="225" alt="Photo of White Beach in Boracay, Philippines" style="border:1px solid black;" /></a>
+        <h3>Dog 1</h3>
+        <p>Ipsum Lorem Jumbo Hakdog</p>
+      </div>
+    </div>
+</section>
+<!--  <section class="destination" id="destination">
+  
+    div class *ngFor let gd of getDogs
+    img src = {{gd.images}}
+    h2 = {{gd.name}}
+-->
+  </body>
