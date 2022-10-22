@@ -7,5 +7,6 @@ export class Dog {
 	color: string = ''
 	images: Blob[] = []
 	adjectives: string = ''
+	story: string = ''
 	hasOwner: boolean = false
 }
