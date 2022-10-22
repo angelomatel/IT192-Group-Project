@@ -13,8 +13,12 @@ import { MatSliderModule } from '@angular/material/slider';
 import { AdoptionpageComponent } from './adoptionpage/adoptionpage.component';
 import { AdoptionformComponent } from './adoptionform/adoptionform.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
-
-
+import { AdminloginComponent } from './adminlogin/adminlogin.component';
+import { AdminadoptionrequestComponent } from './adminadoptionrequest/adminadoptionrequest.component';
+import { AdminanimallistComponent } from './adminanimallist/adminanimallist.component';
+import { AdminimportComponent } from './adminimport/adminimport.component';
+import {MatIconModule} from '@angular/material/icon';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 @NgModule({
   declarations: [
@@ -25,6 +29,10 @@ import { AboutusComponent } from './aboutus/aboutus.component';
     AdoptionpageComponent,
     AdoptionformComponent,
     AboutusComponent,
+    AdminloginComponent,
+    AdminadoptionrequestComponent,
+    AdminanimallistComponent,
+    AdminimportComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,7 +40,9 @@ import { AboutusComponent } from './aboutus/aboutus.component';
     AppRoutingModule,
     HttpClientModule,
     MatToolbarModule,
-    MatSliderModule
+    MatSliderModule,
+    MatIconModule,
+    MatSidenavModule,
   ],
   exports: [MatToolbarModule],
   providers: [],
