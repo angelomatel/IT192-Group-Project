@@ -5,4 +5,8 @@ export class Adoption {
 	adopter_contact: string = ''
 	adopter_email: string = ''
 	adopter_address: string = ''
+
+	constructor(values: Object = {}) {
+		Object.assign(this, values)
+	}
 }
