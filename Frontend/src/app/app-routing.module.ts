@@ -19,28 +19,16 @@ const routes: Routes = [
   // User Paths
   { path: '', redirectTo: '/homepage', pathMatch: 'full' },
   { path: 'homepage', component: HomepageComponent },
-  { path: '', redirectTo: '/adoptionpage', pathMatch: 'full' },
   { path: 'adoptionpage', component: AdoptionpageComponent },
-  { path: '', redirectTo: '/adoptionform', pathMatch: 'full' },
   { path: 'adoptionform', component: AdoptionformComponent },
-  { path: '', redirectTo: '/aboutus', pathMatch: 'full' },
   { path: 'aboutus', component: AboutusComponent },
-  { path: '', redirectTo: '/dog-info/:id', pathMatch: 'full' },
   { path: 'dog-info/:id', component: DogInfoComponent },
 
   // Admin Paths
-  { path: '', redirectTo: '/admin/adminlogin', pathMatch: 'full' },
-  { path: 'admin/adminlogin', component: AdminLoginComponent },
-  { path: '', redirectTo: '/admin/adminadoptionrequest', pathMatch: 'full' },
-  {
-    path: 'admin/adminadoptionrequest',
-    component: AdminAdoptionRequestComponent,
-  },
-  { path: '', redirectTo: '/admin/adminimport', pathMatch: 'full' },
-  { path: 'admin/adminimport', component: AdminImportComponent },
-  { path: '', redirectTo: '/admin/dogs', pathMatch: 'full' },
+  { path: 'admin/login', component: AdminLoginComponent },
+  { path: 'admin/adoptionrequest', component: AdminAdoptionRequestComponent },
+  { path: 'admin/import', component: AdminImportComponent },
   { path: 'admin/dogs', component: AdminAnimalListComponent },
-  { path: '', redirectTo: '/admin/dogprofile/:id', pathMatch: 'full' },
   { path: 'admin/dogprofile/:id', component: DogProfileComponent },
 ];
 
