@@ -12,8 +12,8 @@ import { DogInfoComponent } from './user/dog-info/dog-info.component';
 import { AdminloginComponent } from './admin/adminlogin/adminlogin.component';
 import { AdminadoptionrequestComponent } from './admin/adminadoptionrequest/adminadoptionrequest.component';
 import { AdminimportComponent } from './admin/adminimport/adminimport.component';
-import { AdminanimallistComponent } from './admin/adminanimallist/adminanimallist.component';
-import { SidenavComponent } from './admin/sidenav/sidenav.component';
+import { AdminanimallistComponent } from './admin/adminanimallist/adminanimallist.component'; 
+import { DogprofileComponent } from './admin/dogprofile/dogprofile.component';
 
 const routes: Routes = [
   // User Paths
@@ -40,8 +40,8 @@ const routes: Routes = [
   { path: 'admin/adminimport', component: AdminimportComponent },
   { path: '', redirectTo: '/admin/dogs', pathMatch: 'full' },
   { path: 'admin/dogs', component: AdminanimallistComponent },
-  { path: '', redirectTo: '/admin/sidenav', pathMatch: 'full' },
-  { path: 'sidenav', component: SidenavComponent },
+  { path: '', redirectTo: '/admin/dogprofile/:id', pathMatch: 'full' },
+  { path: 'admin/dogprofile/:id', component: DogprofileComponent },
 ];
 
 @NgModule({

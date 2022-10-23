@@ -29,6 +29,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { DogInfoComponent } from './user/dog-info/dog-info.component';
+import { DogprofileComponent } from './admin/dogprofile/dogprofile.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { DogInfoComponent } from './user/dog-info/dog-info.component';
     FooterComponent,
     DogInfoComponent,
     SidenavComponent,
+    DogprofileComponent,
   ],
   imports: [
     BrowserModule,
