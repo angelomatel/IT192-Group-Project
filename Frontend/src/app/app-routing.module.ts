@@ -13,6 +13,7 @@ import { AdminloginComponent } from './admin/adminlogin/adminlogin.component';
 import { AdminadoptionrequestComponent } from './admin/adminadoptionrequest/adminadoptionrequest.component';
 import { AdminimportComponent } from './admin/adminimport/adminimport.component';
 import { AdminanimallistComponent } from './admin/adminanimallist/adminanimallist.component';
+import { SidenavComponent } from './admin/sidenav/sidenav.component';
 
 const routes: Routes = [
   // User Paths
@@ -36,6 +37,8 @@ const routes: Routes = [
   { path: 'adminimport', component: AdminimportComponent },
   { path: '', redirectTo: '/admin/adminanimallist', pathMatch: 'full' },
   { path: 'adminanimallist', component: AdminanimallistComponent },
+  { path: '', redirectTo: '/admin/sidenav', pathMatch: 'full' },
+  { path: 'sidenav', component: SidenavComponent },
 ];
 
 @NgModule({

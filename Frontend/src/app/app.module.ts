@@ -2,6 +2,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +17,7 @@ import { AdminloginComponent } from './admin/adminlogin/adminlogin.component';
 import { AdminadoptionrequestComponent } from './admin/adminadoptionrequest/adminadoptionrequest.component';
 import { AdminanimallistComponent } from './admin/adminanimallist/adminanimallist.component';
 import { AdminimportComponent } from './admin/adminimport/adminimport.component';
+import { SidenavComponent } from './admin/sidenav/sidenav.component';
 
 // User Pages
 import { AdoptionpageComponent } from './user/adoptionpage/adoptionpage.component';
@@ -44,6 +46,7 @@ import { DogInfoComponent } from './user/dog-info/dog-info.component';
     NavbarComponent,
     FooterComponent,
     DogInfoComponent,
+    SidenavComponent,
   ],
   imports: [
     BrowserModule,
@@ -54,6 +57,7 @@ import { DogInfoComponent } from './user/dog-info/dog-info.component';
     MatSliderModule,
     MatIconModule,
     MatSidenavModule,
+    BrowserAnimationsModule,
   ],
   exports: [MatToolbarModule],
   providers: [],
