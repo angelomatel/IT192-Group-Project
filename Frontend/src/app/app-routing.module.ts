@@ -7,6 +7,7 @@ import { HomepageComponent } from './user/homepage/homepage.component';
 import { AboutusComponent } from './user/aboutus/aboutus.component';
 import { AdoptionpageComponent } from './user/adoptionpage/adoptionpage.component';
 import { AdoptionformComponent } from './user/adoptionform/adoptionform.component';
+import { DogInfoComponent } from './user/dog-info/dog-info.component';
 
 import { AdminloginComponent } from './admin/adminlogin/adminlogin.component';
 import { AdminadoptionrequestComponent } from './admin/adminadoptionrequest/adminadoptionrequest.component';
@@ -23,6 +24,8 @@ const routes: Routes = [
   { path: 'adoptionform', component: AdoptionformComponent },
   { path: '', redirectTo: '/aboutus', pathMatch: 'full' },
   { path: 'aboutus', component: AboutusComponent },
+  { path: '', redirectTo: '/dog-info/:id', pathMatch: 'full' },
+  { path: 'dog-info/:id', component: DogInfoComponent },
 
   // Admin Paths
   { path: '', redirectTo: '/admin/adminlogin', pathMatch: 'full' },
@@ -30,15 +33,13 @@ const routes: Routes = [
   { path: '', redirectTo: '/admin/adminadoptionrequest', pathMatch: 'full' },
   { path: 'adminadoptionrequest', component: AdminadoptionrequestComponent },
   { path: '', redirectTo: '/admin/adminimport', pathMatch: 'full' },
-  { path: 'adminimport', component: AdminimportComponent},
+  { path: 'adminimport', component: AdminimportComponent },
   { path: '', redirectTo: '/admin/adminanimallist', pathMatch: 'full' },
-  { path: 'adminanimallist', component: AdminanimallistComponent },  
-  
+  { path: 'adminanimallist', component: AdminanimallistComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
-
+export class AppRoutingModule {}

@@ -1,5 +1,5 @@
 export class Dog {
-	dog_id: Number = 0
+	id: Number = 0
 	name: string = ''
 	gender: string = ''
 	age: string = ''

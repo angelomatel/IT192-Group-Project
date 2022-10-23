@@ -26,6 +26,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { DogInfoComponent } from './user/dog-info/dog-info.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { FooterComponent } from './components/footer/footer.component';
     AdminimportComponent,
     NavbarComponent,
     FooterComponent,
+    DogInfoComponent,
   ],
   imports: [
     BrowserModule,

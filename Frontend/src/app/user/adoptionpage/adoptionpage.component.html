@@ -1,9 +1,55 @@
-<body>
-  <navbar></navbar>
-<section class="dogs">
-  <h1> Adopt a dog</h1>
-  <div class="row">
-    <!--  <section class="row" id="row">
+<navbar></navbar>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 1440 320"
+  class="absolute z-0"
+>
+  <path
+    fill="#f3f4f5"
+    fill-opacity="1"
+    d="M0,160L60,138.7C120,117,240,75,360,69.3C480,64,600,96,720,128C840,160,960,192,1080,213.3C1200,235,1320,245,1380,250.7L1440,256L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"
+  ></path>
+</svg>
+<div class="p-10 z-10">
+  <div class="text-4xl font-bold text-center drop-shadow-sm text-cyan-900">
+    Save a friend
+  </div>
+  <div
+    class="bg-white flex flex-wrap justify-center items-center p-20 mt-10 gap-10 border border-gray-400 rounded-lg drop-shadow-lg"
+  >
+    <div *ngFor="let dog of dogs">
+      <a
+        routerLink="/dog-info/{{ dog.id }}"
+        target="_href"
+        class="flex flex-col rounded-lg bg-white shadow-lg transform transition duration-300 hover:scale-105 drop-shadow-md"
+      >
+        <img
+          src="//www.html.am/images/html-codes/links/boracay-white-beach-sunset-300x225.jpg"
+          alt="Photo of White Beach in Boracay, Philippines"
+          class="rounded-t-lg overflow-clip mb-2"
+        />
+        <div class="p-5 text-center">
+          <div class="text-xl font-semibold mb-2">{{ dog.id }}</div>
+          <p class="text-light">
+            {{ dog.gender }} | {{ dog.size }} | {{ dog.age }} years old
+          </p>
+          <div class="flex justify-center items-center flex-wrap gap-2">
+            <div *ngFor="let adjective of dog.adjectives.split(',')">
+              <span
+                class="rounded-full bg-cyan-600 text-white font-semibold px-2 py-1"
+                >{{ adjective }}</span
+              >
+            </div>
+          </div>
+          <!-- Foreach adjective, create span 
+          <p>{{ dog.adjectives }}</p> -->
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+<footer></footer>
+<!--  <section class="row" id="row">
   
       <div class="dogs-col">
 
@@ -17,28 +63,9 @@
     </div>
 -->
 
-      <div *ngFor="let dog of dogs">
-        <a href="https://en.wikipedia.org/wiki/Boracay" target="_blank"><img src="//www.html.am/images/html-codes/links/boracay-white-beach-sunset-300x225.jpg" width="300" height="225" alt="Photo of White Beach in Boracay, Philippines" style="border:1px solid black;" /></a>
-        <h3>{{dog.name}}</h3>
-        <p>{{dog.adjectives}}</p>
-        <p>{{dog.gender}} | {{dog.age}} years old</p>
-        <p>{{dog.size}} | {{dog.color}}</p>
-        <p>{{dog.story}}</p>
-      </div>
-
-      <div class="dogs-col">
-
-        <!--THIS WAS SUPPOSED TO BE <img src="">-->
-        <a href="https://en.wikipedia.org/wiki/Boracay" target="_blank"><img src="//www.html.am/images/html-codes/links/boracay-white-beach-sunset-300x225.jpg" width="300" height="225" alt="Photo of White Beach in Boracay, Philippines" style="border:1px solid black;" /></a>
-        <h3>Dog 1</h3>
-        <p>Ipsum Lorem Jumbo Hakdog</p>
-      </div>
-    </div>
-</section>
 <!--  <section class="destination" id="destination">
   
     div class *ngFor let gd of getDogs
     img src = {{gd.images}}
     h2 = {{gd.name}}
 -->
-  </body>
