@@ -1,19 +1,135 @@
-.navbar{
-    justify-content:space-between;
-    background-color:#92B4EC;
-    color:#EDEAE5;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.spananchor a{
-    text-decoration: none;
-    color: #EDEAE5;
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f1f1f1;
+}
+.aboutsection {
+  background: url(https://media.4-paws.org/3/9/3/1/3931c3a89c44aa0c5a73a7e7fa1c07f1a0bc76a6/VIER%20PFOTEN_2016-09-18_081-2000x666-1920x639.jpg)
+    no-repeat;
+  background-size: cover;
+  background-color: #fdfdfd;
+  overflow: hidden;
+  padding: 100px 0;
+}
+.box {
+  width: 45%;
+  float: right;
+  background-color: rgb(229, 231, 235);
+  padding: 150px;
+  text-align: center;
+  opacity: 75%;
+  border-radius: 40px;
+}
+.box:hover {
+  box-shadow: 0 0 90px 0px rgba(22, 78, 99);
 }
 
-footer{
-    background-color: gray;
-    height:200px;
+.box h1 {
+  margin-bottom: 10%;
+  font-size: 50px;
+  font-weight: 400;
+}
+.box p {
+  margin-top: 10%;
+  font-size: 20px;
 }
 
-span {  
-    padding-right: 1rem;
+.text {
+  font-size: 13px;
+  color: #545454;
+  line-height: 30px;
+  text-align: justify;
+  margin-bottom: 40px;
+}
+.info {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(22, 78, 99);
+  background-image: url(assets/dog_bg2.png);
+  background-size: 15%;
+}
+.col {
+  flex-basis: 31%;
+  background-color: white;
+  border-radius: 40px;
+  margin-top: 20%;
+  margin-bottom: 20%;
+  padding: 20px 12px;
+  box-sizing: border-box;
+  transition: 1.5s;
+  text-align: center;
+}
+.col h3 {
+  font-weight: 600;
+  margin: 10px 0;
+  color: rgb(22, 78, 99);
+}
+.col p {
+  margin: 10px 0;
+  color: rgb(22, 78, 99);
+}
+.col:hover {
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+  transform: translateY(-40px);
+}
+
+@media screen and(max-width: 1200px) {
+  .box {
+    padding: 80px;
+  }
+}
+@media screen and(max-width: 1000px) {
+  .aboutsection {
+    background-size: 100%;
+    padding: 100px 40px;
+  }
+  .box {
+    width: 100%;
+  }
+}
+@media screen and(max-width: 600px) {
+  .aboutsection {
+    padding: 0;
+  }
+  .box {
+    padding: 60px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .col {
+    width: 100%;
+  }
+}
+@media (max-width: 700px) {
+  .row {
+    flex-direction: column;
+  }
+}
+.navbar {
+  justify-content: space-between;
+  background-color: #92b4ec;
+  color: #edeae5;
+}
+
+.spananchor a {
+  text-decoration: none;
+  color: #edeae5;
+}
+
+span {
+  padding-right: 1rem;
 }
