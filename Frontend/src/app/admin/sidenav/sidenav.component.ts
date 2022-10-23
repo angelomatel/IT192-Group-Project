@@ -8,7 +8,7 @@ interface SideNavToggle {
 }
 
 @Component({
-  selector: 'app-sidenav',
+  selector: 'sidenav',
   templateUrl: './sidenav.component.html',
   styleUrls: ['./sidenav.component.css'],
   animations: [

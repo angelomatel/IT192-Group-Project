@@ -1,27 +1,34 @@
-<div class="flex justify-center items-center h-screen w-screen">
-  <form autocomplete="off" class="rounded-lg border border-gray shadow-lg p-10">
+<div
+  class="flex justify-center items-center h-screen w-screen bg-cover"
+  style="background-image: url(assets/dog_info_bg.png)"
+>
+  <form
+    autocomplete="off"
+    class="rounded-lg border border-gray shadow-lg p-10 bg-white"
+  >
     <h2 class="w-full text-center text-2xl font-semibold">Admin Sign In</h2>
-    <div class="flex  items-center mb-2">
+    <div class="flex items-center mb-2">
       <input
         type="text"
         required="required"
-        class="border hover:border-2 h-8 rounded border-gray-500 mr-2 pl-2"
+        class="border h-8 rounded border-gray-500 mr-2 pl-2"
       />
       <span class="text-base">Userame</span>
       <i></i>
     </div>
     <div class="flex items-center">
       <input
-        class="border hover:border-2 h-8 rounded border-gray-500 mr-2 pl-2"
+        class="border h-8 rounded border-gray-500 mr-2 pl-2"
         type="password"
         required="required"
       />
       <span class="text-base">Password</span>
     </div>
-    <input
+    <button
       type="submit"
-      value="Login"
-      class="p-2 bg-green-700 hover:bg-green-900 w-full text-white rounded-lg mt-2 font-bold"
-    />
+      class="p-2 cursor-pointer bg-green-700 hover:bg-green-900 w-full text-white rounded-lg mt-2 font-bold"
+    >
+      Login
+    </button>
   </form>
 </div>

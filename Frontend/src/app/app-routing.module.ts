@@ -30,13 +30,16 @@ const routes: Routes = [
 
   // Admin Paths
   { path: '', redirectTo: '/admin/adminlogin', pathMatch: 'full' },
-  { path: 'adminlogin', component: AdminloginComponent },
+  { path: 'admin/adminlogin', component: AdminloginComponent },
   { path: '', redirectTo: '/admin/adminadoptionrequest', pathMatch: 'full' },
-  { path: 'adminadoptionrequest', component: AdminadoptionrequestComponent },
+  {
+    path: 'admin/adminadoptionrequest',
+    component: AdminadoptionrequestComponent,
+  },
   { path: '', redirectTo: '/admin/adminimport', pathMatch: 'full' },
-  { path: 'adminimport', component: AdminimportComponent },
-  { path: '', redirectTo: '/admin/adminanimallist', pathMatch: 'full' },
-  { path: 'adminanimallist', component: AdminanimallistComponent },
+  { path: 'admin/adminimport', component: AdminimportComponent },
+  { path: '', redirectTo: '/admin/dogs', pathMatch: 'full' },
+  { path: 'admin/dogs', component: AdminanimallistComponent },
   { path: '', redirectTo: '/admin/sidenav', pathMatch: 'full' },
   { path: 'sidenav', component: SidenavComponent },
 ];
