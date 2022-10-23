@@ -9,11 +9,11 @@ import { AdoptionpageComponent } from './user/adoptionpage/adoptionpage.componen
 import { AdoptionformComponent } from './user/adoptionform/adoptionform.component';
 import { DogInfoComponent } from './user/dog-info/dog-info.component';
 
-import { AdminloginComponent } from './admin/adminlogin/adminlogin.component';
-import { AdminadoptionrequestComponent } from './admin/adminadoptionrequest/adminadoptionrequest.component';
-import { AdminimportComponent } from './admin/adminimport/adminimport.component';
-import { AdminanimallistComponent } from './admin/adminanimallist/adminanimallist.component'; 
-import { DogprofileComponent } from './admin/dogprofile/dogprofile.component';
+import { AdminLoginComponent } from './admin/adminlogin/adminlogin.component';
+import { AdminAdoptionRequestComponent } from './admin/adminadoptionrequest/adminadoptionrequest.component';
+import { AdminImportComponent } from './admin/adminimport/adminimport.component';
+import { AdminAnimalListComponent } from './admin/adminanimallist/adminanimallist.component'; 
+import { DogProfileComponent } from './admin/dogprofile/dogprofile.component';
 
 const routes: Routes = [
   // User Paths
@@ -30,18 +30,18 @@ const routes: Routes = [
 
   // Admin Paths
   { path: '', redirectTo: '/admin/adminlogin', pathMatch: 'full' },
-  { path: 'admin/adminlogin', component: AdminloginComponent },
+  { path: 'admin/adminlogin', component: AdminLoginComponent },
   { path: '', redirectTo: '/admin/adminadoptionrequest', pathMatch: 'full' },
   {
     path: 'admin/adminadoptionrequest',
-    component: AdminadoptionrequestComponent,
+    component: AdminAdoptionRequestComponent,
   },
   { path: '', redirectTo: '/admin/adminimport', pathMatch: 'full' },
-  { path: 'admin/adminimport', component: AdminimportComponent },
+  { path: 'admin/adminimport', component: AdminImportComponent },
   { path: '', redirectTo: '/admin/dogs', pathMatch: 'full' },
-  { path: 'admin/dogs', component: AdminanimallistComponent },
+  { path: 'admin/dogs', component: AdminAnimalListComponent },
   { path: '', redirectTo: '/admin/dogprofile/:id', pathMatch: 'full' },
-  { path: 'admin/dogprofile/:id', component: DogprofileComponent },
+  { path: 'admin/dogprofile/:id', component: DogProfileComponent },
 ];
 
 @NgModule({

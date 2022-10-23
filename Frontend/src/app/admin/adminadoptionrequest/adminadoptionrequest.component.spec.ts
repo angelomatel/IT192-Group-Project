@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AdminadoptionrequestComponent } from './adminadoptionrequest.component';
+import { AdminAdoptionRequestComponent } from './adminadoptionrequest.component';
 
 describe('AdminadoptionrequestComponent', () => {
-  let component: AdminadoptionrequestComponent;
-  let fixture: ComponentFixture<AdminadoptionrequestComponent>;
+  let component: AdminAdoptionRequestComponent;
+  let fixture: ComponentFixture<AdminAdoptionRequestComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AdminadoptionrequestComponent ]
+      declarations: [ AdminAdoptionRequestComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(AdminadoptionrequestComponent);
+    fixture = TestBed.createComponent(AdminAdoptionRequestComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './adminadoptionrequest.component.html',
   styleUrls: ['./adminadoptionrequest.component.css']
 })
-export class AdminadoptionrequestComponent implements OnInit {
+export class AdminAdoptionRequestComponent implements OnInit {
 
   constructor() { }
 

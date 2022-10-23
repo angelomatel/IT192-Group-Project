@@ -7,7 +7,7 @@ import { DogService } from 'app/service/dog.service';
   templateUrl: './adminanimallist.component.html',
   styleUrls: ['./adminanimallist.component.css'],
 })
-export class AdminanimallistComponent implements OnInit {
+export class AdminAnimalListComponent implements OnInit {
   dogs: Dog[] = [];
 
   constructor(private dogService: DogService) {}

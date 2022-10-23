@@ -13,10 +13,10 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSliderModule } from '@angular/material/slider';
 
 // Admin Pages
-import { AdminloginComponent } from './admin/adminlogin/adminlogin.component';
-import { AdminadoptionrequestComponent } from './admin/adminadoptionrequest/adminadoptionrequest.component';
-import { AdminanimallistComponent } from './admin/adminanimallist/adminanimallist.component';
-import { AdminimportComponent } from './admin/adminimport/adminimport.component';
+import { AdminLoginComponent } from './admin/adminlogin/adminlogin.component';
+import { AdminAdoptionRequestComponent } from './admin/adminadoptionrequest/adminadoptionrequest.component';
+import { AdminAnimalListComponent } from './admin/adminanimallist/adminanimallist.component';
+import { AdminImportComponent } from './admin/adminimport/adminimport.component';
 import { SidenavComponent } from './admin/sidenav/sidenav.component';
 
 // User Pages
@@ -29,7 +29,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { DogInfoComponent } from './user/dog-info/dog-info.component';
-import { DogprofileComponent } from './admin/dogprofile/dogprofile.component';
+import { DogProfileComponent } from './admin/dogprofile/dogprofile.component';
 
 @NgModule({
   declarations: [
@@ -40,15 +40,15 @@ import { DogprofileComponent } from './admin/dogprofile/dogprofile.component';
     AdoptionpageComponent,
     AdoptionformComponent,
     AboutusComponent,
-    AdminloginComponent,
-    AdminadoptionrequestComponent,
-    AdminanimallistComponent,
-    AdminimportComponent,
+    AdminLoginComponent,
+    AdminAdoptionRequestComponent,
+    AdminAnimalListComponent,
+    AdminImportComponent,
     NavbarComponent,
     FooterComponent,
     DogInfoComponent,
     SidenavComponent,
-    DogprofileComponent,
+    DogProfileComponent,
   ],
   imports: [
     BrowserModule,

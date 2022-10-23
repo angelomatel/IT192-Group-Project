@@ -8,7 +8,7 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './dogprofile.component.html',
   styleUrls: ['./dogprofile.component.css'],
 })
-export class DogprofileComponent implements OnInit {
+export class DogProfileComponent implements OnInit {
   public dog_id: string = '';
   public dog: Dog = new Dog();
 
