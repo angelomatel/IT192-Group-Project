@@ -50,6 +50,7 @@ public class MainController {
 
     @RequestMapping(value = "/api/delete-dog/{id}", method = RequestMethod.DELETE)
     public void deleteDog(@PathVariable("id") long id) {
+        dogService.deleteDog(id);
     }
 
     // ADOPTIONS

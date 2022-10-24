@@ -44,6 +44,8 @@ public class DogService implements IDogService {
 
     @Override
     public void deleteDog(long id) {
-        dogRepository.deleteById(id);
+        Optional<Dog> dog = dogRepository.findById(id);
+
+        if(dog.isPresent()) dogRepository.deleteById(id);
     }
 }
