@@ -4,14 +4,15 @@
     <div class="text-cyan-900 text-4xl font-semibold my-8 basis-full">
       Edit {{ dog.name }}
     </div>
-    <div class="py-10 px-20 flex justify-center border rounded-xl shadow-lg">
-      <div class="block">
+    <form [formGroup]="adminDogUpdateForm">
+      <div class="py-10 px-20 flex justify-center border rounded-xl shadow-lg">
+        <div class="block">
         <div class="text-lg font-semibold flex items-center">
           <div class="mr-4">NAME:</div>
           <input
             type="text"
+            formControlName="name"
             class="border-gray-300 rounded-lg p-1 border w-full"
-            value="{{dog.name}}"
           />
         </div>
         <div class="text-lg font-semibold flex items-center mt-5">
@@ -20,7 +21,6 @@
               type="dropdown"
               formControlName="gender"
               class="h-8 border-gray-400 w-1/2 border bg-white rounded-lg px-2 mr-4"
-              value="{{dog.gender}}"
             >
               <!-- Add 2 options for male and female -->
               <option value="male">Male</option>
@@ -29,22 +29,22 @@
           <div class="mr-4">AGE:</div>
           <input
             type="text"
+            formControlName="age"
             class="border-gray-300 rounded-lg p-1 border w-full"
-            value="{{dog.age}}"
           />
         </div>
         <div class="text-lg font-semibold flex items-center mt-5">
           <div class="mr-4">COLOR:</div>
           <input
             type="text"
+            formControlName="color"
             class="border-gray-300 rounded-lg p-1 border w-full mr-5"
-            value="{{dog.color}}"
           />
           <div class="mr-4">SIZE:</div>
           <input
             type="text"
+            formControlName="size"
             class="border-gray-300 rounded-lg p-1 border w-full"
-            value="{{dog.size}}"
           />
         </div>
         <div class="text-lg font-semibold flex mt-5">
@@ -52,8 +52,8 @@
           <div class="block w-full">
             <input
               type="text"
+              formControlName="adjectives"
               class="border-gray-300 rounded-lg p-1 border w-full mr-5"
-              value="{{dog.adjectives}}"
             />
             <span class="text-xs font-light">(DELIMITED BY COMMAS)</span>
           </div>
@@ -67,8 +67,7 @@
               rows="4"
               cols="71"
               class="border-gray-300 rounded-lg p-1 border w-full mr-5"
-              formControlName="adoption_reason"
-              value="{{dog.story}}"
+              formControlName="story"
             ></textarea>
           </div>
         </div>
@@ -79,22 +78,24 @@
               type="text"
               class="border-gray-300 rounded-lg p-1 border w-full mr-5"
               formControlName="images"
-              value="{{dog.images}}"
             />
           </div>
         </div>
         <div class="text-lg font-semibold flex mt-28 justify-end">
           <button
             class="px-5 py-2 bg-red-500 text-white font-semibold text-lg mr-5 rounded-lg hover:bg-red-800"
+            (click)="cancel()"
           >
             CANCEL</button
           ><button
             class="px-5 py-2 bg-green-500 text-white font-semibold text-lg mr-5 rounded-lg hover:bg-green-800"
+            (click)="onSubmit()"
           >
             UPDATE
           </button>
         </div>
+        </div>
       </div>
-    </div>
+    </form>
   </div>
 </div>
