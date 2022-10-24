@@ -20,7 +20,7 @@ export class AdminImportComponent implements OnInit {
     size: '',
     color: '',
     adjectives: '',
-    images: Blob,
+    images: '',
     story: '',
   })
 
@@ -32,22 +32,8 @@ export class AdminImportComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onFileChange(event: any) {
-    if (event.target.files && event.target.files[0]) {
-      let file = event.target.files[0];
-      this.adminDogImportForm.value.images = file;
-      console.log(file)
-    }
-  }
-
   onSubmit(): void {
-    console.log(this.adminDogImportForm.value); 
     Object.assign(this.dog, this.adminDogImportForm.value);
-    console.log(this.adminDogImportForm.value);
-
-    this.dogService.getDogs().subscribe(dogs => {
-      this.dog.setId(dogs.length + 1);
-    });
     
     this.dogService.addDog(this.dog).subscribe((dog) => {
       console.log(dog);

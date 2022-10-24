@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
+
 import { Dog } from 'app/model/dog';
 import { DogService } from 'app/service/dog.service';
-import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-dogprofile',
@@ -12,7 +14,22 @@ export class DogProfileComponent implements OnInit {
   public dog_id: string = '';
   public dog: Dog = new Dog();
 
-  constructor(route: ActivatedRoute, private dogService: DogService) {
+  adminDogUpdateForm = this.formBuilder.group({
+    name: '',
+    gender: '',
+    age: '',
+    size: '',
+    color: '',
+    adjectives: '',
+    images: '',
+    story: '',
+  })
+
+  constructor(
+    route: ActivatedRoute,
+    private formBuilder: FormBuilder,
+    private dogService: DogService
+  ) {
     route.params.subscribe((params) => {
       this.dog_id = params['id'];
     });

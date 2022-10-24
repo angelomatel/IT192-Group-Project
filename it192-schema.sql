@@ -9,7 +9,7 @@ CREATE TABLE `Dogs` (
 	`age` VARCHAR(256),
 	`size` VARCHAR(256),
 	`color` VARCHAR(256),
-	`images` LONGBLOB,
+	`images` TEXT,
 	`adjectives` VARCHAR(2560),
 	`story` VARCHAR(2560),
 	`has_owner` BOOLEAN,

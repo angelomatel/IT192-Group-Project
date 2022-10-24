@@ -2,7 +2,6 @@ package com.it192.backend.model;
 
 import javax.persistence.Entity;
 
-import java.util.Base64;
 import java.util.Objects;
 
 import javax.persistence.*;
@@ -19,7 +18,7 @@ public class Dog {
     private String age;
     private String size;
     private String color;
-    private Base64 images;
+    private String images;
     private String adjectives;
     private String story;
     private boolean hasOwner;
@@ -27,7 +26,7 @@ public class Dog {
     public Dog(){}
 
     public Dog(long dog_id, String name, String gender, String age, String size, String color,
-    Base64 images, String adjectives, String story, boolean hasOwner){
+    String images, String adjectives, String story, boolean hasOwner){
         this.dog_id = dog_id;
         this.name = name;
         this.gender = gender;
@@ -58,7 +57,7 @@ public class Dog {
     public void setColor(String color){
         this.color = color;
     }
-    public void setImages(Base64 images){
+    public void setImages(String images){
         this.images = images;
     }
     public void setAdjectives(String adjectives){
@@ -89,7 +88,7 @@ public class Dog {
     public String getColor(){
         return color;
     }
-    public Base64 getImages(){
+    public String getImages(){
         return images;
     }
     public String getAdjectives(){
