@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 
 import { Dog } from 'app/model/dog';
-import { DogService } from '../../service/dog.service';
+import { DogService } from 'app/service/dog.service';
 
 @Component({
   selector: 'app-adminimport',
