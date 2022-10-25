@@ -29,11 +29,17 @@
               scope="row"
               class="flex items-center py-4 px-6 whitespace-nowrap"
             >
-              <img
-                class="w-10 h-10 rounded-full"
-                src="https://paws.org.ph/wp-content/uploads/2020/12/Adopt-Barbie-1.jpg"
-                alt="Jese image"
-              />
+              <div *ngIf="dog.images; then hasImage; else noImage"></div>
+              <ng-template #hasImage>
+                <img
+                  src="{{dog.images}}"
+                  alt="A photo of {{dog.name}}"
+                  class="rounded-t-lg overflow-clip mb-2 w-10 h-10"
+                />
+              </ng-template>
+              <ng-template #noImage>
+                <mat-icon>image</mat-icon>
+              </ng-template>
               <div class="pl-3">
                 <div class="text-base font-semibold">
                   <a

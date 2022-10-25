@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import { Dog } from '../../model/dog';
-import { DogService } from '../../service/dog.service';
+import { Dog } from 'app/model/dog';
+import { DogService } from 'app/service/dog.service';
 
 @Component({
   selector: 'app-dog-info',

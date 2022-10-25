@@ -14,16 +14,7 @@ export class DogProfileComponent implements OnInit {
   public dog_id: string = '';
   public dog: Dog = new Dog();
 
-  adminDogUpdateForm = this.formBuilder.group({
-    name: '',
-    gender: '',
-    age: '',
-    size: '',
-    color: '',
-    adjectives: '',
-    images: '',
-    story: '',
-  })
+  adminDogUpdateForm = this.formBuilder.group(this.dog);
 
   constructor(
     route: ActivatedRoute,
@@ -35,7 +26,21 @@ export class DogProfileComponent implements OnInit {
     });
     this.dogService.getDog(parseInt(this.dog_id)).subscribe((dog) => {
       this.dog = dog;
+      this.adminDogUpdateForm = this.formBuilder.group(this.dog);
     });
   }
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
+
+  cancel(): void {
+    window.history.back();
+  }
+
+  onSubmit(): void {
+    Object.assign(this.dog, this.adminDogUpdateForm.value);
+
+    this.dogService.updateDog(parseInt(this.dog_id), this.dog).subscribe((dog) => {
+      console.log(dog);
+    })
+  }
 }
