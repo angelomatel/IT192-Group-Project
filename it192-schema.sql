@@ -24,6 +24,7 @@ CREATE TABLE `Adoptions` (
 	`adopter_contact` VARCHAR(256),
 	`adopter_email` VARCHAR(256),
 	`adopter_address` VARCHAR(256),
+	`adopter_reason` TEXT
 	PRIMARY KEY (`adoption_id`)
 );
 
