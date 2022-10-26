@@ -13,9 +13,11 @@ export class AdminAnimalListComponent implements OnInit {
   constructor(private dogService: DogService) {}
 
   deleteDog(id: number): void {
-    this.dogService.deleteDog(id).subscribe((dog) => {
+    this.dogService.deleteDog(id).subscribe(() => {
       console.log(`Successfully deleted dog with id ${id}`);
-      console.log(dog);
+
+      alert(`Successfully deleted dog with id ${id}`);
+      location.reload();
     });
   }
 

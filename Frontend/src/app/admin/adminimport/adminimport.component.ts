@@ -38,6 +38,8 @@ export class AdminImportComponent implements OnInit {
     this.dogService.addDog(this.dog).subscribe((dog) => {
       console.log(dog);
     })
+
+    location.href="/admin/dogs";
   }
 
 }

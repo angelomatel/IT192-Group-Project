@@ -17,7 +17,8 @@ export class AdoptionpageComponent implements OnInit {
 
   ngOnInit(): void {
     this.dogService.getDogs().subscribe((dogs) => {
-      this.dogs = dogs;
+      let strayDogs = dogs.filter((dog) => !dog.hasOwner);
+      this.dogs = strayDogs;
     });
   }
 }

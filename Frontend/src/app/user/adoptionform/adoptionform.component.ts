@@ -38,6 +38,7 @@ export class AdoptionformComponent implements OnInit {
 
   ngOnInit(): void {
     this.dogService.getDogs().subscribe((dogs) => {
+
       this.dogs = dogs;
     });
   }
@@ -54,6 +55,7 @@ export class AdoptionformComponent implements OnInit {
       adopter_contact: contact_number,
       adopter_email: email,
       adopter_address: address,
+      status: 'pending',
 
       dog_id: selected_pet,
     });
@@ -66,4 +68,7 @@ export class AdoptionformComponent implements OnInit {
     this.adoptionForm.reset();
   }
 
+  noOwner(dogs: Dog[]): Dog[] {
+    return dogs.filter(dog => !dog.hasOwner);
+  }
 }

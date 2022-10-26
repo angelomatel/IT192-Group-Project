@@ -119,7 +119,7 @@
           formControlName="selected_pet"
           class="h-8 border-gray-400 w-1/3 border bg-white rounded-lg px-2"
         >
-          <option *ngFor="let dog of dogs" [value]="dog.id">{{dog.name}} ({{ dog.gender }} | {{ dog.size }} | {{ dog.age }} years old)</option>
+          <option *ngFor="let dog of noOwner(dogs)" [value]="dog.id">{{dog.name}} ({{ dog.gender }} | {{ dog.size }} | {{ dog.age }} years old)</option>
         </select>
 
         <textarea

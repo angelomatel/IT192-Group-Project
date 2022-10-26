@@ -42,5 +42,7 @@ export class DogProfileComponent implements OnInit {
     this.dogService.updateDog(parseInt(this.dog_id), this.dog).subscribe((dog) => {
       console.log(dog);
     })
+
+    location.href="/admin/dogs";
   }
 }

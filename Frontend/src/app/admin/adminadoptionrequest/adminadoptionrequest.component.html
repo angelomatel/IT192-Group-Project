@@ -3,7 +3,7 @@
   <div class="p-5 w-full">
     <div class="text-cyan-900 text-4xl font-semibold my-8">
       Manage Adoption Requests
-    </div> 
+    </div>
     <div class="overflow-x-auto relative rounded-t-lg border shadow-md">
       <table class="w-full text-sm text-left text-gray-50">
         <thead class="text-xs text-gray-700 uppercase bg-gray-200 w-full">
@@ -38,11 +38,17 @@
             </td>
             <td class="py-4 px-6">
               <div class="flex items-center">
-                <div *ngIf="adoptee.dog_img; then hasImage; else noImage"></div>
+                <div
+                  *ngIf="
+                    dogsObj[adoptee.dog_id].images;
+                    then hasImage;
+                    else noImage
+                  "
+                ></div>
                 <ng-template #hasImage>
                   <img
-                    src="{{ adoptee.dog_img }}"
-                    alt="A photo of {{ adoptee.dog_name }}"
+                    src="{{ dogsObj[adoptee.dog_id].images }}"
+                    alt="A photo of {{ dogsObj[adoptee.dog_id].name }}"
                     class="rounded-t-lg overflow-clip w-10 h-10"
                   />
                 </ng-template>
@@ -51,10 +57,10 @@
                 </ng-template>
                 <div class="block ml-3">
                   <div class="text-base font-semibold text-black">
-                    {{ adoptee.dog_name }}
+                    {{ dogsObj[adoptee.dog_id].name }}
                   </div>
                   <div class="font-normal text-gray-500">
-                    {{ adoptee.dog_age }} YEAR/S OLD
+                    {{ dogsObj[adoptee.dog_id].age }} YEAR/S OLD
                   </div>
                 </div>
               </div>
@@ -75,12 +81,19 @@
                 </ng-container>
                 <ng-template #pending>
                   <ng-container
-                    *ngIf="adoptee.status == 'pending'; else unknown"
+                    *ngIf="adoptee.status == 'pending'; else rejected"
                   >
                     <div class="text-yellow-500 font-semibold">Pending</div>
                   </ng-container>
-                  <ng-template #unknown>
-                    <div class="text-red-500 font-semibold">Unknown</div>
+                  <ng-template #rejected>
+                    <ng-container
+                      *ngIf="adoptee.status == 'rejected'; else unknown"
+                    >
+                      <div class="text-red-500 font-semibold">Rejected</div>
+                    </ng-container>
+                    <ng-template #unknown>
+                      <div class="text-red-500 font-semibold">unknown</div>
+                    </ng-template>
                   </ng-template>
                 </ng-template>
               </div>
@@ -89,11 +102,11 @@
               <ng-container *ngIf="adoptee.status == 'pending'; else unknown"
                 ><a
                   class="font-medium text-white bg-green-700 hover:bg-green-800 px-4 py-2 rounded-lg cursor-pointer mr-4"
-                  (click)="acceptAdoption(adoptee.adoption_id)"
+                  (click)="acceptAdoption(adoptee)"
                   >Accept</a
                 ><a
                   class="font-medium text-white bg-red-700 hover:bg-red-800 px-4 py-2 rounded-lg cursor-pointer"
-                  (click)="rejectAdoption(adoptee.adoption_id)"
+                  (click)="rejectAdoption(adoptee)"
                   >Reject</a
                 ></ng-container
               >

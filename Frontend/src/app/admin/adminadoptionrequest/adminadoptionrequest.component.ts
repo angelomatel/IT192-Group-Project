@@ -11,20 +11,8 @@ import { AdoptionService } from 'app/service/adoption.service';
   styleUrls: ['./adminadoptionrequest.component.css'],
 })
 export class AdminAdoptionRequestComponent implements OnInit {
-  adopters = [
-    {
-      adopter_address: '',
-      adopter_contact: '',
-      adopter_email: '',
-      adopter_name: '',
-      adoption_id: 0,
-      dog_name: '',
-      dog_img: '',
-      dog_age: '',
-      status: '',
-      adopter_reason: '',
-    },
-  ];
+  adopters: Adoption[] = [];
+  dogsObj: any = {};
 
   constructor(
     private adoptionService: AdoptionService,
@@ -32,10 +20,10 @@ export class AdminAdoptionRequestComponent implements OnInit {
   ) {}
 
   deleteAdoption(id: number) {
-    alert(`Are you sure you want to delete ${id} request?`);
-    return;
+    alert(`Request deleted!`);
     this.adoptionService.deleteAdoption(id).subscribe((data) => {
       console.log(data);
+      location.reload();
     });
   }
 
@@ -64,22 +52,14 @@ export class AdminAdoptionRequestComponent implements OnInit {
 
   ngOnInit(): void {
     this.adoptionService.getAdoptions().subscribe((adoptions) => {
-      adoptions.forEach((adoption) => {
-        this.dogService.getDog(adoption.dog_id).subscribe((dog) => {
-          this.adopters[adoption.adoption_id] = {
-            adopter_address: adoption.adopter_address,
-            adopter_contact: adoption.adopter_contact,
-            adopter_email: adoption.adopter_email,
-            adopter_name: adoption.adopter_name,
-            adoption_id: adoption.adoption_id,
-            dog_name: dog.name,
-            dog_img: dog.images,
-            dog_age: dog.age,
-            status: adoption.status,
-            adopter_reason: adoption.adopter_reason,
-          };
-        });
-      });
+      this.adopters = adoptions;
+    });
+
+    this.dogService.getDogs().subscribe((dogs) => {
+      for (let dog of dogs) {
+        Object.assign(this.dogsObj, { [dog.id]: dog });
+      }
+      console.log(this.dogsObj)
     });
   }
 }

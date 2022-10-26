@@ -15,7 +15,7 @@
     Save a friend
   </div>
   <div
-    class="bg-white flex flex-wrap justify-center items-center p-20 mt-10 gap-10 border border-gray-400 rounded-lg drop-shadow-lg"
+    class="bg-white h-fit flex flex-wrap justify-center items-center p-20 mt-10 gap-10 border border-gray-400 rounded-lg drop-shadow-lg"
   >
     <div *ngFor="let dog of dogs">
       <a
@@ -24,27 +24,31 @@
         class="flex flex-col rounded-lg bg-white shadow-lg transform transition duration-300 hover:scale-105 drop-shadow-md"
       >
         <div *ngIf="dog.images; then hasImage; else noImage"></div>
-          <ng-template #hasImage>
-            <img
-              src="{{dog.images}}"
-              width="300" height="225"
-              alt="A photo of {{dog.name}}"
-              class="rounded-t-lg overflow-clip mb-2"
-            />
-          </ng-template>
-          <ng-template #noImage>
-            <img
-              src="//www.html.am/images/html-codes/links/boracay-white-beach-sunset-300x225.jpg"
-              alt="Photo of White Beach in Boracay, Philippines"
-              class="rounded-t-lg overflow-clip mb-2"
-            />
-          </ng-template>
+        <ng-template #hasImage>
+          <img
+            src="{{ dog.images }}"
+            alt="A photo of {{ dog.name }}"
+            width="312"
+            height="512"
+            class="rounded-t-lg mb-2 align-center object-scale-down bg-cover"
+          />
+        </ng-template>
+        <ng-template #noImage>
+          <img
+            src="//www.html.am/images/html-codes/links/boracay-white-beach-sunset-300x225.jpg"
+            alt="Photo of White Beach in Boracay, Philippines"
+            class="rounded-t-lg overflow-clip mb-2"
+          />
+        </ng-template>
         <div class="p-5 text-center">
           <div class="text-xl font-semibold mb-2">{{ dog.name }}</div>
           <p class="text-light">
-            {{ dog.gender.charAt(0).toUpperCase() + dog.gender.slice(1) }} | {{ dog.size }} | {{ dog.age }} years old
+            {{ dog.gender.charAt(0).toUpperCase() + dog.gender.slice(1) }} |
+            {{ dog.size }} | {{ dog.age }} years old
           </p>
-          <div class="flex justify-center items-center flex-wrap gap-2">
+          <div
+            class="flex justify-center items-center flex-wrap gap-2 gap-y-3 max-w-[17rem]"
+          >
             <div *ngFor="let adjective of dog.adjectives.split(',')">
               <span
                 class="rounded-full bg-cyan-600 text-white font-semibold px-2 py-1"
