@@ -1,5 +1,5 @@
 export class Dog {
-	id: Number = 0
+	id: number = 0
 	name: string = ''
 	gender: string = ''
 	age: string = ''
@@ -14,7 +14,7 @@ export class Dog {
 		Object.assign(this, values)
 	}
 
-	setId(id: Number) {
+	setId(id: number) {
 		this.id = id
 	}
 }

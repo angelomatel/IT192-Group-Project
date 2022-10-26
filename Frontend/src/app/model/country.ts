@@ -1,5 +1,5 @@
 export class Country {
-	id: Number = 0
+	id: number = 0
 	name: string = ''
 	language: string = ''
 }

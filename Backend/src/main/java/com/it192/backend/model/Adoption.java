@@ -15,11 +15,13 @@ public class Adoption {
     private String adopter_contact;
     private String adopter_email;
     private String adopter_address;
+    private String adopter_reason;
 
     public Adoption() {
     }
 
-    public Adoption(long adoption_id, long dog_id, String status, String adopter_name, String adopter_contact, String adopter_email, String adopter_address) {
+    public Adoption(long adoption_id, long dog_id, String status, String adopter_name, String adopter_contact,
+            String adopter_email, String adopter_address, String adopter_reason) {
         this.adoption_id = adoption_id;
         this.dog_id = dog_id;
         this.status = status;
@@ -27,8 +29,8 @@ public class Adoption {
         this.adopter_contact = adopter_contact;
         this.adopter_email = adopter_email;
         this.adopter_address = adopter_address;
+        this.adopter_reason = adopter_reason;
     }
-
 
     public long getAdoption_id() {
         return adoption_id;
@@ -86,6 +88,14 @@ public class Adoption {
         this.adopter_address = adopter_address;
     }
 
+    public String getadopter_reason() {
+        return adopter_reason;
+    }
+
+    public void setadopter_reason(String adopter_reason) {
+        this.adopter_reason = adopter_reason;
+    }
+
     @Override
     public String toString() {
         return "Adoption{" +
@@ -96,19 +106,27 @@ public class Adoption {
                 ", adopter_contact='" + adopter_contact + '\'' +
                 ", adopter_email='" + adopter_email + '\'' +
                 ", adopter_address='" + adopter_address + '\'' +
+                ", adopter_reason='" + adopter_reason + '\'' +
                 '}';
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
         Adoption adoption = (Adoption) o;
-        return adoption_id == adoption.adoption_id && dog_id == adoption.dog_id && Objects.equals(status, adoption.status) && Objects.equals(adopter_name, adoption.adopter_name) && Objects.equals(adopter_contact, adoption.adopter_contact) && Objects.equals(adopter_email, adoption.adopter_email) && Objects.equals(adopter_address, adoption.adopter_address);
+        return adoption_id == adoption.adoption_id && dog_id == adoption.dog_id
+                && Objects.equals(status, adoption.status) && Objects.equals(adopter_name, adoption.adopter_name)
+                && Objects.equals(adopter_contact, adoption.adopter_contact)
+                && Objects.equals(adopter_email, adoption.adopter_email)
+                && Objects.equals(adopter_address, adoption.adopter_address)
+                && Objects.equals(adopter_reason, adoption.adopter_reason);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(adoption_id, dog_id, status, adopter_name, adopter_contact, adopter_email, adopter_address);
+        return Objects.hash(adoption_id, dog_id, status, adopter_name, adopter_contact, adopter_email, adopter_address, adopter_reason);
     }
 }

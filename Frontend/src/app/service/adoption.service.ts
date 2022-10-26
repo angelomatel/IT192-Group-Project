@@ -26,11 +26,11 @@ export class AdoptionService {
     return this.http.post<Adoption>(this.apiUrl + '/add-adoption/', adoption);
   }
 
-  public updateAdoption(id: Number, adoption: Adoption): Observable<Adoption> {
+  public updateAdoption(id: number, adoption: Adoption): Observable<Adoption> {
     return this.http.put<Adoption>(this.apiUrl + '/update-adoption/' + id, adoption);
   }
 
-  public deleteAdoption(id: Number): Observable<Adoption> {
+  public deleteAdoption(id: number): Observable<Adoption> {
     return this.http.delete<Adoption>(this.apiUrl + '/delete-adoption/' + id);
   }
 }

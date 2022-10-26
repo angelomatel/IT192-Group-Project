@@ -26,11 +26,11 @@ export class DogService {
     return this.http.post<Dog>(this.apiUrl + '/add-dog/', dog);
   }
 
-  public updateDog(id: Number, dog: Dog): Observable<Dog> {
+  public updateDog(id: number, dog: Dog): Observable<Dog> {
     return this.http.put<Dog>(this.apiUrl + '/update-dog/' + id, dog);
   }
 
-  public deleteDog(id: Number): Observable<Dog> {
+  public deleteDog(id: number): Observable<Dog> {
     return this.http.delete<Dog>(this.apiUrl + '/delete-dog/' + id);
   }
 }

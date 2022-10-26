@@ -10,8 +10,7 @@
   padding: 0.938rem 0.938rem 0 0.938rem;
   width: 100%;
 }
-.sidenav .logo-container .logo {
-  background: #fff;
+.sidenav .logo-container .logo { 
   text-align: center;
   width: 3rem;
   min-width: 3rem;

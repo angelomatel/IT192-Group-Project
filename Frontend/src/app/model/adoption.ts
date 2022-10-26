@@ -1,7 +1,7 @@
 export class Adoption {
-	adoption_id: Number = 0
-	dog_id: Number = 0
-	status: String = ''
+	adoption_id: number = 0
+	dog_id: number = 0
+	status: string = ''
 	adopter_name: string = ''
 	adopter_contact: string = ''
 	adopter_email: string = ''

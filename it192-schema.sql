@@ -24,7 +24,7 @@ CREATE TABLE `Adoptions` (
 	`adopter_contact` VARCHAR(256),
 	`adopter_email` VARCHAR(256),
 	`adopter_address` VARCHAR(256),
-	`adopter_reason` TEXT
+	`adopter_reason` TEXT,
 	PRIMARY KEY (`adoption_id`)
 );
 
@@ -45,5 +45,5 @@ VALUES ('Dog','male', '1', 'large','brown','loyal,loving,loud','Dog abandoned by
 INSERT INTO Dogs (name,gender,age,size,color,adjectives,story,has_owner)
 VALUES ('Aso','female', '3', 'small','black','loyal,loving,loud','Dog abandoned by owners',true);
 
-INSERT INTO Adoptions (dog_id,status,adopter_name,adopter_contact,adopter_email,adopter_address)
-VALUES (2, 'accepted', 'John DOe','092890182912','john_doe@gmail.com','Blk 1 lot 2 John Doe St.');
+INSERT INTO Adoptions (dog_id,status,adopter_name,adopter_contact,adopter_email,adopter_address, adopter_reason)
+VALUES (1, 'accepted', 'John Doeers','092890182912','john_doe@gmail.com','Blk 1 lot 2 John Doe St.', 'I badly want to have a dog plsplspls');

@@ -26,11 +26,11 @@ export class UserService {
     return this.http.post<User>(this.apiUrl + '/add-user/', User);
   }
 
-  public updateDog(id: Number, User: User): Observable<User> {
+  public updateDog(id: number, User: User): Observable<User> {
     return this.http.put<User>(this.apiUrl + '/update-user/' + id, User);
   }
 
-  public deleteDog(id: Number): Observable<User> {
+  public deleteDog(id: number): Observable<User> {
     return this.http.delete<User>(this.apiUrl + '/delete-user/' + id);
   }
 }
