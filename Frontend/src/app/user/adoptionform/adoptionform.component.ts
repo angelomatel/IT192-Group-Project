@@ -55,6 +55,7 @@ export class AdoptionformComponent implements OnInit {
       adopter_contact: contact_number,
       adopter_email: email,
       adopter_address: address,
+      adopter_reason: adoption_reason,
       status: 'pending',
 
       dog_id: selected_pet,

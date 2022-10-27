@@ -9,11 +9,10 @@ import { AdoptionpageComponent } from './user/adoptionpage/adoptionpage.componen
 import { AdoptionformComponent } from './user/adoptionform/adoptionform.component';
 import { DogInfoComponent } from './user/dog-info/dog-info.component';
 
-import { AdminLoginComponent } from './admin/adminlogin/adminlogin.component';
 import { AdminAdoptionRequestComponent } from './admin/adminadoptionrequest/adminadoptionrequest.component';
 import { AdminImportComponent } from './admin/adminimport/adminimport.component';
-import { AdminAnimalListComponent } from './admin/adminanimallist/adminanimallist.component'; 
-import { DogProfileComponent } from './admin/dogprofile/dogprofile.component';
+import { AdminAnimalListComponent } from './admin/adminanimallist/adminanimallist.component';
+import { DogProfileComponent } from './admin/dogprofile/dogprofile.component ';
 
 const routes: Routes = [
   // User Paths
@@ -25,7 +24,6 @@ const routes: Routes = [
   { path: 'dog-info/:id', component: DogInfoComponent },
 
   // Admin Paths
-  { path: 'admin/login', component: AdminLoginComponent },
   { path: 'admin/adoptionrequest', component: AdminAdoptionRequestComponent },
   { path: 'admin/import', component: AdminImportComponent },
   { path: 'admin/dogs', component: AdminAnimalListComponent },

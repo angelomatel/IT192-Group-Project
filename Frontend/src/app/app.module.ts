@@ -13,7 +13,6 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSliderModule } from '@angular/material/slider';
 
 // Admin Pages
-import { AdminLoginComponent } from './admin/adminlogin/adminlogin.component';
 import { AdminAdoptionRequestComponent } from './admin/adminadoptionrequest/adminadoptionrequest.component';
 import { AdminAnimalListComponent } from './admin/adminanimallist/adminanimallist.component';
 import { AdminImportComponent } from './admin/adminimport/adminimport.component';
@@ -39,8 +38,7 @@ import { DogProfileComponent } from './admin/dogprofile/dogprofile.component';
     HomepageComponent,
     AdoptionpageComponent,
     AdoptionformComponent,
-    AboutusComponent,
-    AdminLoginComponent,
+    AboutusComponent, 
     AdminAdoptionRequestComponent,
     AdminAnimalListComponent,
     AdminImportComponent,

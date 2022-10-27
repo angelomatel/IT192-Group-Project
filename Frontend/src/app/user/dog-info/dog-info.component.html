@@ -37,14 +37,12 @@
     </div>
   </div>
   <div class="block w-1/2">
-    <div
-      class="rounded-xl bg-gray-300 shadow-lg h-[75%] text-gray-400 flex justify-center items-center"
-    >
-    <div *ngIf="dog.images; then hasImage; else noImage"></div>
+    <div class="h-[75%] text-gray-400 flex justify-center items-center">
+      <div *ngIf="dog.images; then hasImage; else noImage"></div>
       <ng-template #hasImage>
         <img
-          src="{{dog.images}}"
-          alt="A photo of {{dog.name}}"
+          src="{{ dog.images }}"
+          alt="A photo of {{ dog.name }}"
           class="rounded-t-lg overflow-clip mb-2 h-full"
         />
       </ng-template>
